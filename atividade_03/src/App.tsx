@@ -25,22 +25,42 @@ class BotaoIncremento extends React.Component<any, any> {
       <div>
         <p>{this.state.count}</p>
         <div>
-          <input type="number" onChange={event => this.setState({ desiredNumber: parseInt(event.target.value) })}></input>
-          <button onClick={() => this.setState({ count: this.state.count + this.state.desiredNumber })}>
+          <input
+            type="number"
+            onChange={event =>
+              this.setState({ desiredNumber: parseInt(event.target.value) })
+            }
+          ></input>
+          <button
+            onClick={() =>
+              this.setState({
+                count: this.state.count + this.state.desiredNumber
+              })
+            }
+          >
             Adicionar
           </button>
         </div>
         <div>
-          <input type="number" onChange={event => this.setState({ desiredNumber: parseInt(event.target.value) })}></input>
-          <button onClick={() => this.setState({ count: this.state.count - this.state.desiredNumber })}>
+          <input
+            type="number"
+            onChange={event =>
+              this.setState({ desiredNumber: parseInt(event.target.value) })
+            }
+          ></input>
+          <button
+            onClick={() =>
+              this.setState({
+                count: this.state.count - this.state.desiredNumber
+              })
+            }
+          >
             Diminuir
           </button>
         </div>
-        <button onClick={() => this.setState({ count: 0 })}>
-          Reset
-        </button>
-      </div >
-    )
+        <button onClick={() => this.setState({ count: 0 })}>Reset</button>
+      </div>
+    );
   }
 }
 
